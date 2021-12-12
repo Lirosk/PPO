@@ -1,0 +1,3 @@
+[submodule "JPong"]
+	path = JPong
+	url = https://github.com/Lirosk/JPong
