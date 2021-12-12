@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/flights_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_writeyourownadapter"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_weight="1"
+                android:text="@string/number" />
+
+            <TextView
+                style="@style/tv_writeyourownadapter"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/planeType" />
+
+            <TextView
+                style="@style/tv_writeyourownadapter"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/destination" />
+
+            <TextView
+                style="@style/tv_writeyourownadapter"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/deportationTime"
+                android:layout_marginEnd="@dimen/marginEnd"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            app:layout_constraintBottom_toTopOf="@+id/layout_buttons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutAddAndEditFileButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/fstGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <EditText
+                    android:id="@+id/et_byDestination"
+                    style="@style/tv_writeyourownadapter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Destination"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/fstGuideline"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/btnEditFile"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/EditFile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/fstGuideline" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutDoneButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="invisible">
+
+                <Button
+                    android:id="@+id/btnDone"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/Done"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                style="@style/tv_writeyourownadapter"
+                android:layout_weight="1"
+                android:hint="@string/number"/>
+
+            <EditText
+                android:id="@+id/et_planeType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                style="@style/tv_writeyourownadapter"
+                android:layout_weight="1"
+                android:hint="@string/planeType"/>
+
+            <EditText
+                android:id="@+id/et_destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                style="@style/tv_writeyourownadapter"
+                android:layout_weight="1"
+                android:hint="@string/destination"/>
+
+            <EditText
+                android:id="@+id/et_deportationTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                style="@style/tv_writeyourownadapter"
+                android:layout_weight="1"
+                android:hint="@string/deportationTime"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="2.5"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnApply"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Apply"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/scndGuideline"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/scndGuideline" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/scndGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

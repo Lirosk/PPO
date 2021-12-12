@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">l2</string>
+    <string name="number">Flight</string>
+    <string name="planeType">Plane</string>
+    <string name="destination">Destination</string>
+    <string name="deportationTime">Time</string>
+
+    <string name="Delete">Delete</string>
+    <string name="Edit">Edit</string>
+
+    <string name="Apply">Apply</string>
+    <string name="Back">Back</string>
+    <string name="Add">Add</string>
+    <string name="EditFile">Edit file</string>
+    <string name="Done">Done</string>
+</resources>

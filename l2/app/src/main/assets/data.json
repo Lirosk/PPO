@@ -1,0 +1,38 @@
+[
+    {
+        "number": 1,
+        "planeType": "A",
+        "destination": "THE CAPITAL OF GREAT BRITAIN",
+        "deportationTime": "18:00"
+    }, 
+    {
+        "number": 2,
+        "planeType": "B",
+        "destination": "Misquise",
+        "deportationTime": "19:00"
+    }, 
+    {
+        "number": 3,
+        "planeType": "A",
+        "destination": "Dirty Amsterdam",
+        "deportationTime": "04:20"
+    }, 
+    {
+        "number": 4,
+        "planeType": "DE+",
+        "destination": "Moscow-City",
+        "deportationTime": "11:47"
+    }, 
+    {
+        "number": 5,
+        "planeType": "AB",
+        "destination": "St. Petersburg, Mother Russia",
+        "deportationTime": "17:03"
+    }, 
+    {
+        "number": 6,
+        "planeType": "OAO",
+        "destination": "St. Petersburg, Florida",
+        "deportationTime": "00:51"
+    }
+]
